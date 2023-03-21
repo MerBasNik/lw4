@@ -18,12 +18,12 @@
     color: #2E2E2E;
 }
 
-.header__nav_link {
+.header--nav {
     color: #2E2E2E;
 }
 
-.header__nav_link::after {
-    background: #2E2E2E;
+.header--nav::after {
+    background-color: #2E2E2E;
 }
 
 /* INTRO */

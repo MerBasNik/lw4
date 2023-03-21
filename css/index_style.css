@@ -5,10 +5,6 @@
     color: #fff;
 }
 
-.header__nav_link {
-    color: #fff;
-}
-
 .intro {
     text-align: center;
     padding: 103px 221px 157px;
@@ -53,38 +49,19 @@
     padding: 13px 0;
     margin-right: 21px;
     width: 16%;
-    transition: 0.1 linear;
 }
 
 .nav__item:last-child {
     margin-right: 0;
 }
 
-.nav__link {
+.nav--item {
     color: #768088;
     font: 400 14px 'Lora';
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    padding-bottom: 5px;
 }
 
-.nav__link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    display: block;
-    background: none repeat scroll 0 0 transparent;
-    height: 2px;
-    width: 0;
+.nav--item::after {
     background: #768088;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-}
-
-.nav__link:hover::after {
-    width: 100%; 
-    left: 0; 
 }
 
 /* SECTION */
@@ -125,6 +102,7 @@
     background: #fff url(../images/features/feat_l.png) center no-repeat;
     background-size: cover;
     margin-right: 10px;
+    position: relative;
 }
 
 .features__item:nth-child(2) {
@@ -151,6 +129,10 @@
 .features__footer {
     display: flex;
     justify-content: space-between; 
+    top: 100%;
+    left: 0;
+    z-index: 0;
+    position: sticky;
 }
 
 .features__footer_l {
@@ -231,9 +213,11 @@
     justify-content: space-between;
     align-items: center;
     position: sticky;
+    top: 100%;
+    left: 0;
+    z-index: 0;
     padding: 7px 13px;
     background-color: #FCFCFC;
-    top: 100%;
 }
 
 .about__footer_l {
