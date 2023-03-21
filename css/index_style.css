@@ -106,6 +106,7 @@
 .features__title_p {
     padding-bottom: 16px;
     display: inline-block;
+    text-align: center;
     border-bottom: solid 1px #DEDEDE;
     color: #2E2E2E;
     font: 400 20px 'Oxygen';
@@ -192,6 +193,7 @@
 .about__title_p {
     padding-bottom: 16px;
     display: inline-block;
+    text-align: center;
     border-bottom: solid 1px #DEDEDE;
     color: #2E2E2E;
     font: 400 20px 'Oxygen';
@@ -207,7 +209,6 @@
     width: 296px;
     margin: 0 25px 25px 0;
     background-color: #fff;
-    box-sizing: border-box;
     position: relative;
 }
 
@@ -223,18 +224,15 @@
     min-height: 93px;
     padding: 13px;
     box-sizing: border-box;
-   
 }
 
 .about__footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
-    padding: 7px 13px;
-    margin-top: 5px;
-    background-color: #FCFCFC;
     position: sticky;
+    padding: 7px 13px;
+    background-color: #FCFCFC;
     top: 100%;
 }
 
@@ -246,7 +244,6 @@
 .about__icon {
     margin-right: 10px;
 }
-
 
 .about__text_title {
     font: 400 16px 'Lora';

@@ -71,6 +71,7 @@
 .footer__intro_p {
     padding-bottom: 16px;
     display: inline-block;
+    text-align: center;
     border-bottom: solid 1px #DEDEDE;
     color: #EFEFEF;
     font: 400 25px 'Oxygen';
@@ -102,6 +103,7 @@
 
 .input__submit:hover {
     background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
 }
 
 .footer__inner {
