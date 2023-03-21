@@ -27,13 +27,19 @@
 
 .button {
     font: 400 13px 'Oxygen';
-    background-color: #DD783F;
     color: #fff;
     padding: 12px 31px;
     margin: 31px;
     display: inline-block;
     text-decoration: none;
     border-radius: 3px;
+    background-color: #DD783F;
+    transition: background-color 0.6s, transform 0.5s;
+}
+
+.button:hover {
+    background-color: #bf571b;
+    transform: scale(110%);
 }
 
 /* NAVIGATION */
@@ -47,6 +53,7 @@
     padding: 13px 0;
     margin-right: 21px;
     width: 16%;
+    transition: 0.1 linear;
 }
 
 .nav__item:last-child {
@@ -57,6 +64,27 @@
     color: #768088;
     font: 400 14px 'Lora';
     text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    width: 0;
+    background: #768088;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.nav__link:hover::after {
+    width: 100%; 
+    left: 0; 
 }
 
 /* SECTION */
@@ -85,20 +113,22 @@
 
 .features__inner {
     display: flex;
+    flex-wrap: wrap;
 } 
 
 .features__item {
     box-sizing: border-box;
     padding: 130px 20px 15px;
-    width: 50%;
+    max-width: 50%;
+    width: 460px;
     background: #fff url(../images/features/feat_l.png) center no-repeat;
-    background-size: 100%;
+    background-size: cover;
     margin-right: 10px;
 }
 
-.features__item:last-child {
+.features__item:nth-child(2) {
     background: #fff url(../images/features/feat_r.png) center no-repeat;
-    background-size: 100%;
+    background-size: cover;
     margin: 0 0 0 10px;
     padding: 10px 20px 15px;
 }
@@ -169,18 +199,31 @@
 
 .about__inner {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .about__item {
     max-width: 33.33333%;
-    margin: 0 26px 25px 0;
+    width: 296px;
+    margin: 0 25px 25px 0;
     background-color: #fff;
     box-sizing: border-box;
+    position: relative;
 }
 
-.about__item:last-child {
+.about__img {
+    width: 100%;
+}
+
+.about__item:nth-child(3n+3) {
     margin-right: 0;
+}
+
+.about__text {
+    min-height: 93px;
+    padding: 13px;
+    box-sizing: border-box;
+   
 }
 
 .about__footer{
@@ -191,6 +234,8 @@
     padding: 7px 13px;
     margin-top: 5px;
     background-color: #FCFCFC;
+    position: sticky;
+    top: 100%;
 }
 
 .about__footer_l {
@@ -202,11 +247,6 @@
     margin-right: 10px;
 }
 
-.about__text {
-    min-height: 93px;
-    padding: 13px;
-    box-sizing: border-box;
-}
 
 .about__text_title {
     font: 400 16px 'Lora';
